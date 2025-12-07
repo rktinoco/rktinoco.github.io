@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git Cheatsheet — rktinoco</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title"><a href="/">rktinoco</a></h1>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/cheats/">Cheatsheets</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="content">
+        <h1>Git Cheatsheet</h1>
+        <p>Concise reference for everyday Git workflows: init, stage, commit, branch, sync, and undo safely.</p>
+
+        <h2>Quick Commands</h2>
+        <ul>
+          <li><strong>Init:</strong> <code>git init</code></li>
+          <li><strong>Clone:</strong> <code>git clone &lt;url&gt;</code></li>
+          <li><strong>Status:</strong> <code>git status -s</code></li>
+          <li><strong>Add:</strong> <code>git add .</code></li>
+          <li><strong>Commit:</strong> <code>git commit -m "msg"</code></li>
+          <li><strong>Amend (opt):</strong> <code>git commit --amend</code></li>
+        </ul>
+
+        <h2>Branching &amp; History</h2>
+        <ul>
+          <li><strong>Create &amp; switch:</strong> <code>git checkout -b feat</code> / <code>git switch feat</code></li>
+          <li><strong>Log compact:</strong> <code>git log --oneline --graph</code></li>
+          <li><strong>Diff:</strong> <code>git diff</code> / <code>git diff --staged</code></li>
+          <li><strong>Stash:</strong> <code>git stash push -m "WIP"</code></li>
+        </ul>
+
+        <h2>Sync &amp; Rewriting</h2>
+        <ul>
+          <li><strong>Fetch:</strong> <code>git fetch --all</code></li>
+          <li><strong>Pull (rebase preferred):</strong> <code>git pull --rebase</code></li>
+          <li><strong>Push:</strong> <code>git push origin HEAD</code></li>
+          <li><strong>Merge:</strong> <code>git merge feature</code></li>
+          <li><strong>Rebase:</strong> <code>git rebase main</code></li>
+          <li><strong>Interactive rebase (opt):</strong> <code>git rebase -i HEAD~3</code></li>
+          <li><strong>Reset (danger):</strong> <code>git reset --hard HEAD</code></li>
+          <li><strong>Tag:</strong> <code>git tag -a v1.0 -m "v1.0"</code></li>
+        </ul>
+
+        <hr>
+        <div class="footer">Website: rktinoco.github.com</div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">&copy; rktinoco · <a href="https://rktinoco.github.com">rktinoco.github.com</a></div>
+    </footer>
+  </body>
+</html>

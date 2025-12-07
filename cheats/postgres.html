@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PostgreSQL Cheatsheet — rktinoco</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title"><a href="/">rktinoco</a></h1>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/cheats/">Cheatsheets</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="content">
+        <h1>PostgreSQL Cheatsheet</h1>
+        <p>Essential SQL patterns and Postgres commands for app development and local DB work.</p>
+
+        <h2>Connection &amp; Client</h2>
+        <ul>
+          <li><strong>Connection URI:</strong> <code>postgres://user:pass@host:5432/db</code></li>
+          <li><strong>psql:</strong> <code>psql -h host -U user -d db</code></li>
+          <li><strong>List / Describe (psql):</strong> <code>\dt</code> / <code>\d table</code></li>
+        </ul>
+
+        <h2>Queries</h2>
+        <ul>
+          <li><strong>Select:</strong> <code>SELECT * FROM users LIMIT 10;</code></li>
+          <li><strong>Where / Order / Limit:</strong> <code>WHERE active=true ORDER BY id DESC LIMIT 20</code></li>
+          <li><strong>Insert + Returning:</strong> <code>INSERT INTO t(name) VALUES('x') RETURNING id;</code></li>
+          <li><strong>Update / Delete:</strong> <code>UPDATE users SET active=false WHERE id=1;</code></li>
+        </ul>
+
+        <h2>Joins, Aggregates &amp; Transactions</h2>
+        <ul>
+          <li><strong>Join:</strong> <code>SELECT * FROM a JOIN b ON a.id=b.a_id;</code></li>
+          <li><strong>Aggregate:</strong> <code>SELECT status, COUNT(*) FROM orders GROUP BY status;</code></li>
+          <li><strong>Transactions:</strong> <code>BEGIN; ... COMMIT;</code> / <code>ROLLBACK;</code></li>
+          <li><strong>Upsert:</strong> <code>INSERT ... ON CONFLICT (id) DO UPDATE SET ...;</code></li>
+        </ul>
+
+        <h2>Schema &amp; Tools</h2>
+        <ul>
+          <li><strong>Create table:</strong> <code>CREATE TABLE users (id SERIAL PRIMARY KEY, name TEXT);</code></li>
+          <li><strong>Index:</strong> <code>CREATE INDEX idx_users_email ON users(email);</code></li>
+          <li><strong>Backup / Restore:</strong> <code>pg_dump -Fc -f dump.sql db</code> / <code>pg_restore -d db dump.sql</code></li>
+        </ul>
+
+        <hr>
+        <div class="footer">Website: rktinoco.github.com</div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">&copy; rktinoco · <a href="https://rktinoco.github.com">rktinoco.github.com</a></div>
+    </footer>
+  </body>
+</html>

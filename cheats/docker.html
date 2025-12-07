@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker Cheatsheet — rktinoco</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title"><a href="/">rktinoco</a></h1>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/cheats/">Cheatsheets</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="content">
+        <h1>Docker Cheatsheet</h1>
+        <p>Commands for images, containers, volumes, ports, and Compose workflows.</p>
+
+        <h2>Core Commands</h2>
+        <ul>
+          <li><strong>Run:</strong> <code>docker run -d --name app -p 8080:80 nginx</code></li>
+          <li><strong>Images / Pull:</strong> <code>docker images</code> / <code>docker pull alpine</code></li>
+          <li><strong>Containers:</strong> <code>docker ps -a</code></li>
+          <li><strong>Start / Stop / Remove:</strong> <code>docker start c</code> / <code>docker stop c</code> / <code>docker rm -f c</code></li>
+          <li><strong>Logs:</strong> <code>docker logs -f c</code></li>
+          <li><strong>Exec:</strong> <code>docker exec -it c sh</code></li>
+        </ul>
+
+        <h2>Build &amp; Publish</h2>
+        <ul>
+          <li><strong>Build:</strong> <code>docker build -t myapp:dev .</code></li>
+          <li><strong>Tag / Push:</strong> <code>docker tag myapp repo/myapp:1.0</code> / <code>docker push repo/myapp:1.0</code></li>
+          <li><strong>Save / Load (opt):</strong> <code>docker save img &gt; img.tar</code> / <code>docker load &lt; img.tar</code></li>
+        </ul>
+
+        <h2>Compose &amp; Cleanup</h2>
+        <ul>
+          <li><strong>Compose up/down:</strong> <code>docker compose up -d</code> / <code>docker compose down</code></li>
+          <li><strong>Compose logs:</strong> <code>docker compose logs -f</code></li>
+          <li><strong>Prune (opt):</strong> <code>docker system prune -af</code></li>
+          <li><strong>Inspect:</strong> <code>docker inspect c</code></li>
+        </ul>
+
+        <hr>
+        <div class="footer">Website: rktinoco.github.com</div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">&copy; rktinoco · <a href="https://rktinoco.github.com">rktinoco.github.com</a></div>
+    </footer>
+  </body>
+</html>

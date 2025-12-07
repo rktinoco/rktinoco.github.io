@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Linux Shell Cheatsheet — rktinoco</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <h1 class="site-title"><a href="/">rktinoco</a></h1>
+        <nav class="site-nav">
+          <a href="/">Home</a>
+          <a href="/cheats/">Cheatsheets</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <article class="content">
+        <h1>Linux Shell Cheatsheet</h1>
+        <p>Quick commands for navigation, file ops, search, process control, and I/O redirection.</p>
+
+        <h2>Navigation &amp; Files</h2>
+        <ul>
+          <li><strong>List:</strong> <code>ls -lah</code></li>
+          <li><strong>Change / Print dir:</strong> <code>cd /path</code> / <code>pwd</code></li>
+          <li><strong>Copy / Move / Remove:</strong> <code>cp src dst</code> / <code>mv a b</code> / <code>rm -rf dir</code></li>
+          <li><strong>Make dir:</strong> <code>mkdir -p dir</code></li>
+        </ul>
+
+        <h2>Inspect &amp; Search</h2>
+        <ul>
+          <li><strong>View:</strong> <code>less file</code> / <code>head -n 20 file</code> / <code>tail -f file</code></li>
+          <li><strong>Search:</strong> <code>grep -R "foo" .</code></li>
+          <li><strong>Find:</strong> <code>find . -name '*.log'</code></li>
+          <li><strong>xargs:</strong> <code>find . -print0 | xargs -0 rm</code></li>
+        </ul>
+
+        <h2>Processes &amp; System</h2>
+        <ul>
+          <li><strong>Processes:</strong> <code>ps aux</code> / <code>top</code></li>
+          <li><strong>Kill:</strong> <code>kill &lt;pid&gt;</code> / <code>killall node</code></li>
+          <li><strong>Disk:</strong> <code>du -sh .</code> / <code>df -h</code></li>
+          <li><strong>Compress:</strong> <code>tar -czf a.tar.gz dir</code></li>
+        </ul>
+
+        <h2>Shell &amp; Env</h2>
+        <ul>
+          <li><strong>Redirects &amp; Pipes:</strong> <code>cmd > out 2>&1 | tee out.log</code></li>
+          <li><strong>Env var:</strong> <code>export KEY=val</code></li>
+          <li><strong>Alias:</strong> <code>alias ll='ls -lah'</code></li>
+          <li><strong>SSH / SCP:</strong> <code>ssh user@host</code> / <code>scp file user@host:/tmp</code></li>
+        </ul>
+
+        <hr>
+        <div class="footer">Website: rktinoco.github.com</div>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">&copy; rktinoco · <a href="https://rktinoco.github.com">rktinoco.github.com</a></div>
+    </footer>
+  </body>
+</html>

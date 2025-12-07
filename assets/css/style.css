@@ -29,8 +29,8 @@ main.wrap{padding-top:6px}
 /* Cheatsheet content styling: use monospace, compact spacing */
 .content, article {
   font-family: inherit;
-  font-size:13px;
-  line-height:1.45;
+  font-size:14px;
+  line-height:1.5;
   color: #e6e6e6;
 }
 
@@ -49,8 +49,22 @@ li{ margin:4px 0 }
 
 /* Responsive */
 @media (max-width:700px){
-  .site-nav{float:none;text-align:right;margin-top:0}
-  .site-title{font-size:28px}
+  .site-nav{float:none;text-align:center;margin:12px 0 0 0}
+  .site-nav a{display:inline-block;margin:6px 8px}
+  .site-title{font-size:24px;text-align:center}
   .wrap{padding:0 12px}
+  /* scale down content for small screens */
+  .content { font-size:15px }
+  h1 { font-size:22px }
+  pre { font-size:11px }
+  code { font-size:11px }
+}
+
+/* further small devices */
+@media (max-width:400px){
+  .wrap{padding:0 8px}
+  .site-title{font-size:20px}
+  .content{font-size:14px}
+  h1{font-size:20px}
 }
 
