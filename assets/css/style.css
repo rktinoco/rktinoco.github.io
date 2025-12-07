@@ -1,0 +1,21 @@
+:root{
+  --max-width: 900px;
+  --accent: #2b8cff;
+}
+body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; line-height:1.45; margin:0;}
+.wrap{max-width:var(--max-width); margin:24px auto; padding:0 16px}
+.site-header{background:#fff;border-bottom:1px solid #eee}
+.site-title{margin:12px 0; font-size:20px}
+.site-title a{color:var(--accent); text-decoration:none}
+.site-nav{float:right; margin-top:-36px}
+.site-nav a{margin-left:12px; color:#333; text-decoration:none}
+.site-footer{border-top:1px solid #eee; padding:12px 0; margin-top:24px; text-align:center; color:#666}
+main.wrap{padding-top:12px}
+h1,h2{color:#111}
+pre{background:#f8f9fb;border:1px solid #eee;padding:8px;overflow:auto}
+code{background:#f0f2f5;padding:2px 4px;border-radius:3px}
+
+/* Responsive */
+@media (max-width:700px){
+  .site-nav{float:none;text-align:right;margin-top:0}
+}

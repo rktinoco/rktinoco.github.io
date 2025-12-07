@@ -1,0 +1,9 @@
+title: rktinoco
+email: ""
+description: >
+  Minimal site for blogs and cheatsheets.
+baseurl: "" # the subpath of your site, e.g. /repo-name
+url: "https://rktinoco.github.io" # your GitHub Pages URL (update if different)
+theme: minima
+markdown: kramdown
+permalink: /:path/
