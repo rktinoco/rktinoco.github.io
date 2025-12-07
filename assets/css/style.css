@@ -1,21 +1,56 @@
+
+/* Dark monospace cheatsheet style (inspired by screenshot) */
 :root{
-  --max-width: 900px;
-  --accent: #2b8cff;
+  --max-width:980px;
+  --bg:#0b0b0b;
+  --muted:#9aa1a6;
+  --accent:#66d9ef;
 }
-body{font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; line-height:1.45; margin:0;}
-.wrap{max-width:var(--max-width); margin:24px auto; padding:0 16px}
-.site-header{background:#fff;border-bottom:1px solid #eee}
-.site-title{margin:12px 0; font-size:20px}
-.site-title a{color:var(--accent); text-decoration:none}
-.site-nav{float:right; margin-top:-36px}
-.site-nav a{margin-left:12px; color:#333; text-decoration:none}
-.site-footer{border-top:1px solid #eee; padding:12px 0; margin-top:24px; text-align:center; color:#666}
-main.wrap{padding-top:12px}
-h1,h2{color:#111}
-pre{background:#f8f9fb;border:1px solid #eee;padding:8px;overflow:auto}
-code{background:#f0f2f5;padding:2px 4px;border-radius:3px}
+
+html,body{height:100%;}
+body{
+  background:var(--bg);
+  color:#e6e6e6;
+  margin:0;
+  font-family: 'Menlo', 'Consolas', 'Liberation Mono', monospace;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{max-width:var(--max-width); margin:32px auto; padding:0 20px}
+
+.site-header{background:transparent; border-bottom: none; margin-bottom: 6px}
+.site-title{margin:6px 0 18px 0; font-size:38px; font-weight:700; color:#ffffff}
+.site-title a{color:inherit; text-decoration:none}
+.site-nav{float:right; margin-top:-46px}
+.site-nav a{margin-left:14px; color:var(--muted); text-decoration:none}
+
+main.wrap{padding-top:6px}
+
+/* Cheatsheet content styling: use monospace, compact spacing */
+.content, article {
+  font-family: inherit;
+  font-size:13px;
+  line-height:1.45;
+  color: #e6e6e6;
+}
+
+h1 { font-size:28px; margin: 6px 0 12px 0; color: #fff }
+h2 { font-size:14px; margin:14px 0 8px 0; color: #fff }
+
+/* inline code and small blocks */
+code{ background:#eef3f7; color:#111; padding:2px 6px; border-radius:4px; font-size:12px }
+pre{ background:#eef3f7; color:#111; padding:10px; border-radius:6px; overflow:auto; font-size:12px }
+
+/* lists compact */
+ul{ margin:6px 0 10px 1.4em; }
+li{ margin:4px 0 }
+
+.site-footer{border-top:none; padding:18px 0; margin-top:30px; text-align:center; color:var(--muted)}
 
 /* Responsive */
 @media (max-width:700px){
   .site-nav{float:none;text-align:right;margin-top:0}
+  .site-title{font-size:28px}
+  .wrap{padding:0 12px}
 }
+
