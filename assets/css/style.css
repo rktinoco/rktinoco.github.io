@@ -1,8 +1,7 @@
 
-/* Dark monospace cheatsheet style (inspired by screenshot) */
+/* Dark cheatsheet style */
 :root{
   --max-width:980px;
-  /* dark theme defaults */
   --bg:#0b0b0b;
   --surface:#0f1113;
   --text:#e6e6e6;
@@ -14,13 +13,6 @@
   --link-bg: rgba(74,163,255,0.06);
   --link-bg-hover: rgba(11,121,208,0.08);
   --link-radius: 0.18rem;
-
-  /* light theme fallbacks (used when .light-theme is present) */
-  --light-bg: #ffffff;
-  --light-surface: #fbfbfb;
-  --light-text: #111827;
-  --light-muted: #6b7280;
-  --light-link: #0b5fff;
 }
 
 html,body{height:100%;}
@@ -80,26 +72,6 @@ a:hover,a:focus{
   box-shadow: 0 0 0 3px rgba(11,121,208,0.06);
 }
 a code{ white-space:normal; word-break:break-word }
-
-/* Light theme overrides */
-.light-theme{
-  --surface: var(--light-surface);
-  --text: var(--light-text);
-  --muted: var(--light-muted);
-  --link: var(--light-link);
-  --link-bg: rgba(11,95,255,0.06);
-}
-
-/* Theme toggle button */
-.theme-toggle{
-  background:transparent;
-  border:1px solid rgba(255,255,255,0.06);
-  color:var(--text);
-  padding:6px 8px;
-  border-radius:6px;
-  cursor:pointer;
-}
-.theme-toggle:focus{ box-shadow: 0 0 0 3px rgba(74,163,255,0.12); outline:none }
 
 /* lists compact */
 ul{ margin:6px 0 10px 1.4em; }
